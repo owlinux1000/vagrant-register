@@ -8,10 +8,7 @@ module VagrantRegister
   class Plugin < Vagrant.plugin("2")
     
     name "vagrant-register"
-    description <<-DESC
-    Sahara
-    DESC
-
+    description "Register the machine with vagrant-anywhere"
     command("register") do
       require File.expand_path("../vagrant-register/command/register", __FILE__)
       Command::CommandRegister

@@ -20,8 +20,8 @@ module VagrantRegister
         # Parse the options
         argv = parse_options(opts)
         return if !argv
-
-        @env.ui.info(`pwd`)
+        
+        @env.ui.info("Hello World")
         # Success, exit status 0
         0
         
