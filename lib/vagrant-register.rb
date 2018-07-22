@@ -4,7 +4,9 @@
 require "vagrant"
 
 module VagrantRegister
+  
   class Plugin < Vagrant.plugin("2")
+    
     name "vagrant-register"
     description <<-DESC
     Sahara
@@ -14,5 +16,7 @@ module VagrantRegister
       require File.expand_path("../vagrant-register/command/register", __FILE__)
       Command::CommandRegister
     end
+    
   end
+  
 end

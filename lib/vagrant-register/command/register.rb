@@ -2,13 +2,16 @@ require 'optparse'
 require 'json'
 
 module VagrantRegister
+  
   module Command
+    
     class CommandRegister < Vagrant.plugin("2", :command)
+      
       def execute
         opts = OptionParser.new do |o|
           o.banner = "Usage: vagrant register [machine-name]"
         end
-
+        
         # Parse the options
         argv = parse_options(opts)
         return if !argv
@@ -25,6 +28,9 @@ module VagrantRegister
         # Success, exit status 0
         0
       end
+      
     end
+    
   end
+  
 end
